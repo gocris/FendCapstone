@@ -1,0 +1,97 @@
+//This Page Contains all the @Mixins
+
+@mixin flexbox($justifyContent, $alingItems) {
+    display: flex;
+    flex-direction: row;
+    justify-content: $justifyContent;
+    align-items: $alingItems;
+}
+
+@mixin flexboxPhone() {
+    display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
+}
+
+@mixin font($font-family, $size, $spacing, $bold, $col) {
+    font-family: $font-family;
+    font-size: $size;
+    letter-spacing: $spacing;
+    font-weight: $bold;
+    color: $col;
+}
+
+
+@mixin headingCenter($blockWidth, $topPos) {
+    position: absolute;
+    width: $blockWidth;
+    top: $topPos;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+@mixin buttonRight($butColor) { 
+    display: block;
+	content: "";
+    position: absolute;
+    top: -.2em;
+    right: 20%;
+    height: .3em;
+    width: 10%;
+    background: $butColor;
+    transform: skewX(-45deg); /* Standard syntax */
+    transition: all .45s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+@mixin buttonLeft($butColor) { 
+    display: block;
+	content: "";
+    position: absolute;
+    bottom: -.2em;
+    left: 20%;
+    height: .3em;
+    width: 10%;
+    background: $butColor;
+    transform: skewX(-45deg); /* Standard syntax */
+    transition: all .45s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+
+// MEDIA QUERY MANAGER
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+        @media only screen and (max-width: 37.5em) { @content };    //600px
+    }
+    @if $breakpoint == tab-port {
+        @media only screen and (max-width: 56.25em) { @content };     //900px
+    }
+    @if $breakpoint == tab-land {
+        @media only screen and (max-width: 75em) { @content };    //1200px
+    }
+    @if $breakpoint == big-desktop {
+        @media only screen and (min-width: 112.5em) { @content };    //1800
+    }
+}
+
+//only: The only keyword prevents older browsers that do not support media queries with media features from applying the specified styles. 
+//It has no effect on modern browsers.

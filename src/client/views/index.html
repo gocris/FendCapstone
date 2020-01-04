@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title>Capstone | Travel App</title>
+        <link rel = "shortcut icon" href = "../media/sheikah-eye.png">
+    </head>
+    <body>
+        <div class = 'container'>
+            <div id = 'stickyNavBar'>
+                <ul id = "stickyNav-list">
+                    <li><a href = '#top' class = 'navItem'><img src = '../media/arrow.png'></a></li>
+                </ul>
+            </div>
+
+            <nav class = 'box'>
+                <div id = 'logo-box'>
+                    <a href = '#'><img src = '../media/logo.png' id = 'logo'></img></a>
+                </div>
+                <ul class = "navigation">
+                    <li><a href = '#' class = "navItem">Section 1</a></li>
+                    <li><a href = '#' class = "navItem">Section 2</a></li>
+                    <li><a href = '#' class = "navItem">Section 3</a></li>
+                    <li><a href = '#' class = "navItem">Contact Us</a></li>
+                </ul>
+            </nav>
+            
+            <header class = 'box'>
+                <div id = 'text-box'>
+                    <div id = 'circle'></div>
+                    <h2 class = 'heading-primary'>
+                        <span class = 'heading-primary-main title'>Travel Planner</span>
+                    </h2>
+                </div>
+            </header> 
+
+            <aside class = 'box'>
+
+            </aside>
+
+            <section class = 'box'>
+                <div class = 'u-center-text u-margin-bottom-8'>
+                    <div class = 'heading-secondary title'>
+                        We Can Predict the Weather
+                    </div>
+                </div>
+
+                    <div class = "row">
+                        <div class = "col-1">
+                            <fieldset>
+                                <legend>Trip Information</legend>
+                                <label for = 'zip'>City, State:</label>
+                                <input type = 'text' id = 'zip' placeholder = 'city, st'><br>
+                                <label for = 'startDate'>Start Date:</label>
+                                <input type = 'text' id = 'startDate' placeholder = "mm/dd/yyyy"><br>
+                                <label for = 'endDate'>End Date:</label>
+                                <input type = 'text' id = 'endDate' placeholder = 'mm/dd/yyyy'><br>
+                                <button id = "gene" type = "submit"> ENTER </button>
+                            </fieldset>
+                        </div>
+                
+                        <div class = "col-2"> 
+                            <ul>
+                                <li>City: <span id = "cityUI">city</span></li>
+                                <li>Lng: <span id = 'dateUI'>lng</span></li>
+                                <li>Lat: <span id = 'tempUI'>lat</span></li>
+                                <li>CountDown: <span id = 'countDownUI'>days</span></li>
+                                <li>Length of Trip: <span id = 'lotUI'>days</span></li>
+                                <li>Prospective Weather: <span id = 'weather'></span></li>
+                                <li><span id = 'pixImage'></span></li>
+                            </ul>
+                        </div>
+                    </div>
+        
+            </section>
+
+            <footer class = 'box'> 
+                <div class = 'heading-final-title'><img src = '../media/sheikah-eye.png'></div>
+                <div class = "bottom-flex">
+                    <div class = 'first-col'>
+                        <ul>
+                            <dt class = 'foot-title'>FEND Capstone</dt>
+                            <li>My web development capstone <br> project. Built With: HTML CSS <br> SASS JS Node.js & Webpack</li>
+                        </ul>
+                    </div>
+                    <div class = 'second-col'>
+                        <ul>
+                            <dt class = 'foot-title'>Explore</dt>
+                            <li><a href = '#' class = 'navItem'>Home</a></li>
+                            <li><a href = '#' class = 'navItem'>About Me</a></li>
+                        </ul>
+                    </div>
+                    <div class = 'third-col'>
+                        <ul>
+                            <dt class = 'foot-title'>e-mail Me</dt>
+                            <li>www.cristiangomez1600@gmail.com</li>
+                        </ul>
+                    </div>
+                    <div class = 'fourth-col'>
+                        <ul>
+                            <li><a href = '#' class = 'navItem leaving'><img src = '../media/ig.png' id = 'ig-logo'> <p>on Instagram</p></a></li>
+                            <li><a href = '#' class = 'navItem leaving'><img src = '../media/twitter.png' id = 'twitter-logo'> <p>on Twitter</p></a></li>
+                            <li><a href = 'https://www.linkedin.com/in/cristiangomez562/' class = 'navItem leaving'><img src = '../media/linkedin.png' id = 'linkedin-logo'> <p>on Linkedin</p></a></li>
+                        </ul>
+                    </div>
+                    </div>
+            </footer>
+        </div>
+        <audio id = "headaudio"><source src = "../media/title.wav" type = "audio/wav"></source></audio>
+        <audio id = "navaudio"><source src = "../media/nav.wav" type = "audio/wav"></source></audio>
+        <audio id = "clickaudio"><source src = "../media/click.wav" type = "audio/wav"></source></audio>
+        <audio id = "buttonaudio"><source src = "../media/button.wav" type = "audio/wav"></source></audio>
+        <audio id = "buttonclickaudio"><source src = "../media/buttonClick.wav" type = "audio/wav"></source></audio>
+        
+        <script>
+            // Check that service workers are supported
+            if ('serviceWorker' in navigator) {
+                // Use the window load event to keep the page load performant
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js');
+                });
+            }
+        </script>
+    </body> 
+</html>

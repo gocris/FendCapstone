@@ -1,0 +1,91 @@
+footer { 
+    grid-area: foot;
+    position: relative;
+
+    z-index: -1;
+    margin-top: -7.5vh; 
+    background: black;
+    height: 50vh;
+    @include respond(phone) {
+        height: 40em;
+    }
+
+    .heading-final-title { 
+      @include headingCenter(100%, 30%);
+      @include respond(phone) {
+          @include headingCenter(100%, 20%);
+      }
+
+      img { 
+          height: 65px;
+          filter: blur(.6px);
+
+          &:hover {
+              filter: saturate(2);
+          }
+      }
+    }
+
+    .bottom-flex {
+    @include flexbox(space-evenly, flex-start);
+    @include respond(phone) {
+        @include flexboxPhone();
+    }
+
+    height: 100%;
+    padding-top: 13em;
+  
+    ul {
+      height: 100%;
+
+      li {
+          line-height: 2;
+          letter-spacing: .5px;
+          @include respond(phone) {
+              display: inline-block;
+              margin: .5em;
+          }
+
+          a {
+              font-family: 'Quicksand';
+              color:  rgb(255, 205, 111);
+
+              &:hover {
+                  color: $aqua;
+              }
+
+              &:link, &:visited {
+                  text-decoration: none;
+                  transition: all .5s;
+              }
+          }
+      }
+
+      p {
+          float: right;
+          margin-left: 15px;
+          @include respond(phone) {
+              display: none;
+          }
+      }
+
+      img { 
+          height: 35px;
+          margin: 2px;
+      }
+}}
+}
+
+.foot-title { 
+  color: $aqua;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: solid rgb(95, 95, 95) 2px;
+  transition: all .5s;
+
+  &:hover { 
+      color: whitesmoke;
+  }
+}

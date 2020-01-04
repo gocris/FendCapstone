@@ -1,0 +1,38 @@
+//This folder contains all the keyframe animations
+
+@keyframes moveInBottom { 
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: .95;
+        transform: translate(0);
+    }
+}
+
+@keyframes rotate {
+  0%, 100% {
+      opacity: 0;
+      transform: translateY(250px);
+  }
+  10%, 20% {
+      opacity: .80;
+      transform: translate(0);
+  }
+
+  15%, 30% {
+      transform: translateY(10px);
+  }
+
+  40% {
+      opacity: .80;
+      transform: translate(0);
+  }
+
+  50% {
+      opacity: 0;
+      transform: translateY(250px);
+  }
+}

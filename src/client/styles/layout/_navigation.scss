@@ -1,0 +1,74 @@
+#logo-box { 
+    position: absolute;
+    top: 16px;
+    left: 12.5px;
+
+    @include respond(phone) {
+        display: none;
+    }
+  }
+
+
+#logo { 
+    height: 30px;
+    transition: all .5s;
+
+    &:hover {
+        filter: saturate(200%);
+    }
+}
+
+nav { 
+    grid-area: nav;
+    background-color: $topBot;
+    position: relative;
+
+      ul {
+        @include flexbox(flex-end, center);
+        @include respond(phone) {
+            @include flexbox(space-evenly, center);
+        }
+        height: 100%;
+        list-style: none;
+
+        li { 
+            margin: 15px;
+
+            a {
+                font-family: 'Quicksand';
+                font-size: 1em;
+                color:  rgb(255, 205, 111);
+
+                &:hover {
+                    color: $aqua;
+                }
+
+                &:link, &:visited {
+                    text-decoration: none;
+                    transition: all .5s;
+                }
+            }
+        }
+    }
+}
+
+#stickyNavBar { 
+    position: fixed;
+    height: 80px;
+    width: 80px;
+    top: -100px;
+    right: 50px;
+    z-index: 100;
+    transition: all .5s ease-out;
+    text-align: center;
+    filter: blur(1px);
+
+    img { 
+        height: 50px;
+        transition: all .5s ease-out;
+
+        &:hover { 
+            filter: saturate(2);
+        }
+    }
+}

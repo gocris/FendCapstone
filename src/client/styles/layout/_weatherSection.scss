@@ -1,0 +1,112 @@
+section { 
+    grid-area: cont;
+    position: relative;
+    z-index: 2;
+    padding: 10rem 0;
+    height: 95vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.95), rgba(0, 11, 12, .95), rgb(0, 11, 12)),
+    url("../media/hexagon.png");
+    background-size: cover;
+    background-position: center;
+    margin-top: -10vh;
+    clip-path: polygon(0 0, 100% 0, 100% 95%,0 100%);
+
+    @include respond(phone) {
+        height: 145vh;
+    }
+
+    .heading-secondary {
+        @include font('Cinzel Decorative', 35px, 5px, bold, rgb(214, 164, 70));
+        transition: all .5s;
+
+        &:hover {
+            color: whitesmoke;
+        }
+      }
+
+      .row {
+          @include flexbox(space-around, center);
+          @include respond(phone) {
+              @include flexboxPhone();
+          }
+          
+          padding: 30px;
+          line-height: 1.6;
+
+          .col-1 {
+              line-height: 3;
+              //margin-bottom: 2em;
+
+              fieldset {
+                  padding: 25px;
+                  border: groove 1px $aqua;
+                  border-radius: 10px;
+                  box-shadow: 0 0 5px 0 aqua;
+                  transition: all .5s;
+
+                  &:hover {
+                      box-shadow: 0 0 15px 0 aqua;
+                  }
+
+                  legend {
+                      @include font(Quicksand, 21px, .7px, bold, white)
+                  }
+              }
+
+              label {
+                  @include font(Dosis, 16px, .7px, bold, $aqua);
+                  transition: all .5s;
+
+                  &:hover {
+                      color: whitesmoke;
+                  }
+              }
+
+              input {
+                  background: transparent;
+                  border: solid 1px $aqua;
+                  border-radius: 5px;
+                  box-shadow: inset 0 0 7px 0 aqua;
+                  padding-left: 12px;
+                  width: 100%;
+                  @include font(Quicksand, 16px, .5px, 0, white);
+                  transition: all .5s;
+                  outline: none;
+
+                  &:focus {
+                      border: solid 1px $gold;
+                      box-shadow: inset 0 0 7px 0 $gold;
+                  }
+
+              }
+
+              button {
+                  margin-left: 35%;
+                  @include respond(phone) {
+                      margin: auto;
+                  }
+              }
+
+          }
+
+          .col-2 {
+              text-align: left;
+              @include respond(phone) {
+                  margin: 3em 2em 0 2em;
+              }
+
+              li {
+                  @include font(Dosis, 16px, .5px, bold, $aqua);
+                  transition: all .5s;
+
+                  &:hover {
+                      color: whitesmoke;
+                  }
+
+                  span {
+                      @include font(Quicksand, 16px, .5px, normal, white)
+                  }
+              }
+          }
+      }
+}

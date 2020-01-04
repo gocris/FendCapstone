@@ -1,0 +1,53 @@
+//This page contains the header section
+
+header { 
+    grid-area: head;
+    height: 95vh;
+    background-image: linear-gradient($gradientOne, $gradientTwo),
+    url("../media/sheikah.png");
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    z-index: 3;
+    clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 100%);
+
+    #text-box {
+      @include headingCenter(100%, 20%);
+
+      .heading-primary-main { 
+          display: inline-block;
+          @include font('Cinzel Decorative', 50px, 10px, bold, rgb(214, 164, 70));
+          animation: moveInBottom 1.5s ease-in-out;
+          transition: all .5s;
+          filter: blur(.5px);
+
+          &:hover {
+              color: rgba(255, 255, 255, 0.95)
+          }
+      }
+      
+    }
+
+    #circle {
+      position: absolute;
+      top: 35px;
+      left: 10%;
+      transform: translate(-50%, -50%);
+      width: 25px;
+      height: 25px;
+      background: rgb(0, 255, 234);
+      filter: blur(4px);
+      border-radius: 50%;
+      animation-name: rotate;
+      animation-duration: 20s;
+      animation-iteration-count: infinite;
+      animation-fill-mode: backwards;
+      animation-delay: 5s;
+      transition: .5s;
+
+      &:hover {
+          background-color: rgba(0, 0, 0, 0);;
+      }
+    }
+
+}

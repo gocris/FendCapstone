@@ -1,0 +1,33 @@
+button { 
+    position: relative;
+    border: solid 3px $aqua;
+    border-radius: 10px;
+    background: none;
+    margin: 20px;
+    padding: 8px 12px;
+    box-shadow: inset 0 0 3px aqua;
+    transition: all .5s;
+    @include font(Dosis, 16px, 1px, bold, $gold);
+    cursor: pointer;
+    
+
+    &::before { 
+        @include buttonRight(#222);
+    }
+
+    &::after { 
+        @include buttonLeft(#222);
+    }
+
+    &:hover { 
+        color: $aqua;
+
+        &::before {
+            right: 80%;
+        }
+
+        &::after { 
+            left: 80%;
+        }
+    }
+}

@@ -1,0 +1,36 @@
+//No underscore or .sccs req
+@import "abstracts/mixins";
+@import "abstracts/variables";
+@import "base/animations"; 
+@import "base/base";
+@import "base/utilities";
+@import "components/button";
+@import "layout/footer";
+@import "layout/header";
+@import "layout/navigation";
+@import "layout/weatherSection";
+
+@import url(http://fonts.googleapis.com/css?family=Quicksand:400,700);
+@import url(http://fonts.googleapis.com/css?family=Cinzel+Decorative:400,700);
+@import url(http://fonts.googleapis.com/css?family=Dosis:400,700);
+
+//Grid Section
+.container { 
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 60px 1fr 1fr 1fr;
+    grid-template-areas: 
+    "nav nav nav nav"
+    "head head head head"
+    "cont cont cont cont"
+    "foot foot foot foot";
+
+    height: 100vh;
+
+  }
+
+aside { 
+    grid-area: side;
+    max-width: 250px;
+    background: blue;
+}
