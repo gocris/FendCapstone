@@ -4,6 +4,7 @@ const darkSkyUrl = 'https://api.darksky.net/forecast/';
 const darkSkyAPIKey = '671a71b3bef16fefdbe5d84fc06a7c00';
 const pixabayURL = 'https://pixabay.com/api/?key=';
 const pixabayAPIKey = '14765512-087c09684104ecafca4e3b55f';
+const proxy = 'https://cors-anywhere.herokuapp.com/';
 
 const gen = (function() {
     document.getElementById('gene').addEventListener('click', performAction);
@@ -142,7 +143,7 @@ const getCityOrPostalCode = (zipOrCity)=>{
 
 const _fetchDarkSky = async(darkURL, darkKey, lat, lng, time)=>{
 
-    const response = await fetch(`${darkURL}${darkKey}/${lat},${lng},${time}`);
+    const response = await fetch(`${proxy}${darkURL}${darkKey}/${lat},${lng},${time}`);
     try { 
         const data = await response.json();
         console.log(data);
