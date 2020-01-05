@@ -1,7 +1,7 @@
 # FEND Capstone Travel App
 
 ## About the Project
-The purpose of the travel app is to give the user the predicted weather for his/her trip. Furthermore, the final capstone project will utilize every front end web development skill gained throught out the course to display a professional and responsive web application. Such skills are: 
+The purpose of the travel app is to give the user the predicted weather for his/her trip. Furthermore, the final capstone project will utilize every front end web development skill gained through out the course to display a professional and responsive web application. Such skills are: 
 * **HTML**
   * Semantic Elements, Forms, Buttons, Audio/Video, list, anchors
 * **CSS SCSS**
