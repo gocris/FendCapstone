@@ -1,10 +1,4 @@
-const username = "cris562" //GeoNames username
-const GeoNames = 'api.geonames.org/postalCodeSearchJSON?';
-const darkSkyUrl = 'https://api.darksky.net/forecast/';
-const darkSkyAPIKey = '671a71b3bef16fefdbe5d84fc06a7c00';
-const pixabayURL = 'https://pixabay.com/api/?key=';
-const pixabayAPIKey = '14765512-087c09684104ecafca4e3b55f';
-const proxy = 'https://cors-anywhere.herokuapp.com/';
+/*All my API Keys go here but for security reasons I deleted them and took a picture of them*/
 
 const gen = (function() {
     document.getElementById('gene').addEventListener('click', performAction);
